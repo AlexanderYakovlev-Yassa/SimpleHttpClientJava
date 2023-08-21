@@ -15,5 +15,16 @@ public class SimpleHTTPClient {
         String response = requestHandler.getResponse(request);
 
         System.out.println(response);
+
+        Man man = new Man();
+        man.setName("Alexander");
+        man.setSureName("Yakovlev");
+        man.setAge( 48);
+
+        System.out.println(manToString(man));
+    }
+
+    private static String manToString(Man man) {
+        return man.getName() + ", " + man.getSureName() + ", " + man.getAge();
     }
 }
